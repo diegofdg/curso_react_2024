@@ -10,6 +10,8 @@ export function TwitterFollowCard({ children, userName }) {
         setIsFollowing(!isFollowing)
     }
 
+    console.log("twitter-follow-car render with name: ", userName)
+
     return (
         <article className="tw-followCard">
             <header className="tw-followCard-header">

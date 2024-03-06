@@ -3,41 +3,22 @@ import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
-    const [ name, setName ] = useState('midudev')
+    const [ isFollowing, setIsFollowing ] = useState(false)
 
-    console.log("render with name: ", name)
-
-    // Comentarios de JavaScript
+    console.log("App render with isFollowing: ", isFollowing)
     
-    /* Comentarios 
-    multilíneas 
-    de JavaScript */
-
-    return (        
+    return (
         <section className='App'>
             <TwitterFollowCard
-                userName={name}
+                userName={"midudev"}
+                initialIsFollowing={isFollowing}
             >
                 Miguel Angel Duran
             </TwitterFollowCard>
-            
-            { /* Comentarios en JSX */}
-            
-            <TwitterFollowCard
-                userName="pheralb"
-            >
-                Pablo Hernandez
-            </TwitterFollowCard>
-
-            <TwitterFollowCard
-                userName="vxnder"
-            >
-                Vanderhart
-            </TwitterFollowCard>
             <button
-                onClick={() => setName("pedromichel")}
+                onClick={() => setIsFollowing(!isFollowing)}
             >
-                Cambiar nombre
+                Cambiar estado de App
             </button>
         </section>
     )

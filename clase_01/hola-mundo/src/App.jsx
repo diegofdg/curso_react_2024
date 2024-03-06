@@ -1,25 +1,31 @@
-import { useState } from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
-    const [ isFollowing, setIsFollowing ] = useState(false)
-
-    console.log("App render with isFollowing: ", isFollowing)
-    
     return (
         <section className='App'>
             <TwitterFollowCard
                 userName={"midudev"}
-                initialIsFollowing={isFollowing}
+                initialIsFollowing={true}
             >
                 Miguel Angel Duran
             </TwitterFollowCard>
-            <button
-                onClick={() => setIsFollowing(!isFollowing)}
+            
+            <TwitterFollowCard
+                userName="pheralb"
+                
+                initialIsFollowing={false}
             >
-                Cambiar estado de App
-            </button>
+                Pablo Hernandez
+            </TwitterFollowCard>
+
+            <TwitterFollowCard
+                userName="vxnder"
+                
+                initialIsFollowing={false}
+            >
+                Vanderhart
+            </TwitterFollowCard>
         </section>
     )
 }

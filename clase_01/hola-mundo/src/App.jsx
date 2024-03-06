@@ -2,26 +2,22 @@ import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
-    const midudev = { isFollowing: true, userName: "midudev" }
-    const pheralb = { isFollowing: false, userName: "pheralb" }
-    const vxnder = { isFollowing: true, userName: "vxnder" }
-
     return (
         <section className='App'>
             <TwitterFollowCard
-                {...midudev}                
+                userName={"midudev"}
             >
                 Miguel Angel Duran
             </TwitterFollowCard>
             
             <TwitterFollowCard
-                {...pheralb}                
+                userName="pheralb"
             >
                 Pablo Hernandez
             </TwitterFollowCard>
 
             <TwitterFollowCard
-                {...vxnder}                
+                userName="vxnder"
             >
                 Vanderhart
             </TwitterFollowCard>
